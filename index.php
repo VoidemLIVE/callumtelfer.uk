@@ -151,6 +151,7 @@ function printToConsole($data) {
         </div>
         <div>
             <span class="text-gray-500 text-lg font-bold">Callum Telfer</span>
+            <p class="text-sm text-gray-500 hover:text-gray-700 "><a href="https://github.com/VoidemLIVE/callumtelfer.uk" target="#">Github Repository</a></p>
         </div>
     </div>
 </footer>
