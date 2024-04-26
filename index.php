@@ -1,3 +1,10 @@
+<?php
+function printToConsole($data) {
+    echo "<script>console.log('Debug:" . json_encode($data) . "');</script>";
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
