@@ -18,7 +18,7 @@ function printToConsole($data) {
     <meta name="robots" content="index, follow">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
-    <link rel="icon" type="image/png" href="CTD_LOGO.png">
+    <link rel="icon" type="image/png" href="assets/CTD_LOGO.png">
 </head>
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
 
@@ -36,7 +36,7 @@ function printToConsole($data) {
         </div>
     </nav>
     <header class="bg-gradient-to-r from-blue-500 to-indigo-600 relative pt-16 pb-32 flex content-center items-center justify-center" style="min-height: 75vh;" id="home">
-        <div class="absolute top-0 w-full h-full bg-center bg-cover" style="background-image:url('london_2023.jpeg');">
+        <div class="absolute top-0 w-full h-full bg-center bg-cover" style="background-image:url('assets/london_2023.jpeg');">
             <span id="blackOverlay" class="w-full h-full absolute opacity-60 bg-black"></span>
         </div>
         <div class="container relative mx-auto">
@@ -71,29 +71,41 @@ function printToConsole($data) {
                         </svg>
                         <p class="text-xs ml-1 mr-2 font-bold">Java</p>
                         </div>
+                        <div class="inline-flex items-center bg-gray-400 rounded-full p-1">
+                            <img width="25" height="20" src="assets/spigot.png" alt="Tailwind Logo" style="width: 25px; height: 20px;">
+                            <p class="text-xs ml-1 mr-2 font-bold">Spigot</p>
+                        </div>
                     </div>
                 </div>
                 <div class="w-full md:w-1/3 lg:w-1/4 p-4">
                     <div class="rounded-lg shadow-lg bg-gray-200 p-6">
-                        <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/VoidemLIVE/VoidemAPI" target="#">VoidemAPI</a></h3>
-                        <p class="text-gray-700">A collection of public custom APIs that are used in my projects</p>
+                        <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/VoidemLIVE/callumtelfer.uk" target="#">Callumtelfer.uk</a></h3>
+                        <p class="text-gray-700">My personal website that you are currently viewing!</p>
                         <div class="inline-flex items-center bg-gray-400 rounded-full p-1">
                         <svg width="20" height="20">
                             <circle cx="10" cy="10" r="5" fill="#4F5D95" />
                         </svg>
                         <p class="text-xs ml-1 mr-2 font-bold">PHP</p>
                         </div>
+                        <div class="inline-flex items-center bg-gray-400 rounded-full p-1">
+                            <img width="25" height="20" src="assets/twLogo.png" alt="Tailwind Logo" style="width: 25px; height: 20px;">
+                            <p class="text-xs ml-1 mr-2 font-bold">Tailwind</p>
+                        </div>
                     </div>
                 </div>
                 <div class="w-full md:w-1/3 lg:w-1/4 p-4">
                     <div class="rounded-lg shadow-lg bg-gray-200 p-6">
-                        <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/VoidemLIVE/voidem.com" target="#">Voidem Website</a></h3>
-                        <p class="text-gray-700">My personal website which showcases my experience</p>
+                        <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/VoidemLIVE/VoidemScreenshots" target="#">Screenshot Manager</a></h3>
+                        <p class="text-gray-700">A system that allows you to store and display screenshots</p>
                         <div class="inline-flex items-center bg-gray-400 rounded-full p-1">
                         <svg width="20" height="20">
-                            <circle cx="10" cy="10" r="5" fill="#e34c26" />
+                            <circle cx="10" cy="10" r="5" fill="#4F5D95" />
                         </svg>
-                        <p class="text-xs ml-1 mr-2 font-bold">HTML</p>
+                        <p class="text-xs ml-1 mr-2 font-bold">PHP</p>
+                        </div>
+                        <div class="inline-flex items-center bg-gray-400 rounded-full p-1">
+                            <img width="25" height="20" src="assets/twLogo.png" alt="Tailwind Logo" style="width: 25px; height: 20px;">
+                            <p class="text-xs ml-1 mr-2 font-bold">Tailwind</p>
                         </div>
                     </div>
                 </div>
