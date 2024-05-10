@@ -63,22 +63,6 @@ function printToConsole($data) {
             <div class="flex flex-wrap justify-center">
                 <div class="w-full md:w-1/3 lg:w-1/4 p-4">
                     <div class="rounded-lg shadow-lg bg-gray-200 p-6">
-                        <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/VoidemLIVE/Help-Command-Plugin" target="#">Help Command</a></h3>
-                        <p class="text-gray-700">A Minecraft plugin that creates a custom /help command</p>
-                        <div class="inline-flex items-center bg-gray-400 rounded-full p-1">
-                        <svg width="20" height="20">
-                            <circle cx="10" cy="10" r="5" fill="#b07219" />
-                        </svg>
-                        <p class="text-xs ml-1 mr-2 font-bold">Java</p>
-                        </div>
-                        <div class="inline-flex items-center bg-gray-400 rounded-full p-1">
-                            <img width="25" height="20" src="assets/spigot.png" alt="Tailwind Logo" style="width: 25px; height: 20px;">
-                            <p class="text-xs ml-1 mr-2 font-bold">Spigot</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-full md:w-1/3 lg:w-1/4 p-4">
-                    <div class="rounded-lg shadow-lg bg-gray-200 p-6">
                         <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/VoidemLIVE/callumtelfer.uk" target="#">Callumtelfer.uk</a></h3>
                         <p class="text-gray-700">My personal website that you are currently viewing!</p>
                         <div class="inline-flex items-center bg-gray-400 rounded-full p-1">
@@ -90,6 +74,38 @@ function printToConsole($data) {
                         <div class="inline-flex items-center bg-gray-400 rounded-full p-1">
                             <img width="25" height="20" src="assets/twLogo.png" alt="Tailwind Logo" style="width: 25px; height: 20px;">
                             <p class="text-xs ml-1 mr-2 font-bold">Tailwind</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/3 lg:w-1/4 p-4">
+                    <div class="rounded-lg shadow-lg bg-gray-200 p-6">
+                        <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/VoidemLIVE/GeoWordle" target="#">Geo Wordle</a></h3>
+                        <p class="text-gray-700">A geography wordle-like game for guessing countries</p>
+                        <div class="inline-flex items-center bg-gray-400 rounded-full p-1">
+                        <svg width="20" height="20">
+                            <circle cx="10" cy="10" r="5" fill="#4F5D95" />
+                        </svg>
+                        <p class="text-xs ml-1 mr-2 font-bold">PHP</p>
+                        </div>
+                        <div class="inline-flex items-center bg-gray-400 rounded-full p-1">
+                            <img width="25" height="20" src="assets/twLogo.png" alt="Tailwind Logo" style="width: 25px; height: 20px;">
+                            <p class="text-xs ml-1 mr-2 font-bold">Tailwind</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/3 lg:w-1/4 p-4">
+                    <div class="rounded-lg shadow-lg bg-gray-200 p-6">
+                        <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/VoidemLIVE/Help-Command-Plugin" target="#">Help Command</a></h3>
+                        <p class="text-gray-700">A Minecraft plugin that creates a custom /help command</p>
+                        <div class="inline-flex items-center bg-gray-400 rounded-full p-1">
+                        <svg width="20" height="20">
+                            <circle cx="10" cy="10" r="5" fill="#b07219" />
+                        </svg>
+                        <p class="text-xs ml-1 mr-2 font-bold">Java</p>
+                        </div>
+                        <div class="inline-flex items-center bg-gray-400 rounded-full p-1">
+                            <img width="25" height="20" src="assets/spigot.png" alt="Tailwind Logo" style="width: 25px; height: 20px;">
+                            <p class="text-xs ml-1 mr-2 font-bold">Spigot</p>
                         </div>
                     </div>
                 </div>
