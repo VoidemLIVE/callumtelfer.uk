@@ -28,8 +28,8 @@ function printToConsole($data) {
             <div class="hidden lg:block">
                 <ul class="inline-flex">
                     <li><a href="#" class="px-4 py-2 text-gray-700 hover:text-gray-900 font-bold" onclick="scrollToElement('home')">Home</a></li>
-                    <li><a href="#" class="px-4 py-2 text-gray-700 hover:text-gray-900 font-bold" onclick="scrollToElement('projects')">Projects</a></li>
-                    <li><a href="#" class="px-4 py-2 text-gray-700 hover:text-gray-900 font-bold" onclick="scrollToElement('skills')">Skills</a></li>
+                    <li><a href="#projects" class="px-4 py-2 text-gray-700 hover:text-gray-900 font-bold" onclick="scrollToElement('projects')">Projects</a></li>
+                    <li><a href="#skills" class="px-4 py-2 text-gray-700 hover:text-gray-900 font-bold" onclick="scrollToElement('skills')">Skills</a></li>
                     <li><a href="https://cv.callumtelfer.uk" target="#" class="px-4 py-2 text-gray-700 hover:text-gray-900 font-bold">Resume</a></li>
                 </ul>
             </div>
