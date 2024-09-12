@@ -16,6 +16,8 @@ function printToConsole($data) {
     <meta name="keywords" content="Callum, Telfer, Callum Telfer, Personal Website, Web Development, Minecraft Plugins, Java, PHP, HTML, CSS, SQL, Python, JavaScript">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index, follow">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha512-HaoDYc3PGduguBWOSToNc0AWGHBi2Y432Ssp3wNIdlOzrunCtB2qq6FrhtPbo+PlbvRbyi86dr5VQx61eg/daQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
     <link rel="icon" type="image/png" href="assets/CTD_LOGO.png">
@@ -183,15 +185,15 @@ function printToConsole($data) {
         </div>
     </div>
 </footer>
-        <script>
-        function scrollToElement(id) {
-            var element = document.getElementById(id);
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-            } else {
-                console.error("Element with ID '" + id + "' not found.");
-            }
+<script>
+    function scrollToElement(id) {
+        var element = document.getElementById(id);
+        if (element) {
+            gsap.to(window, {scrollTo: element, duration: 1, ease: "power2.out"});
+        } else {
+            console.error("Element with ID '" + id + "' not found.");
         }
-    </script>
+    }
+</script>
 </body>
 </html>
