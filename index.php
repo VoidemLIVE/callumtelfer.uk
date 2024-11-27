@@ -1,199 +1,525 @@
-<?php
-function printToConsole($data) {
-    echo "<script>console.log('Debug:" . json_encode($data) . "');</script>";
-}
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Callum Telfer</title>
+    <title>Callum Telfer | Developer</title>
     <meta name="description" content="Callum Telfer's personal development portfolio">
     <meta name="author" content="Callum Telfer">
-    <meta name="keywords" content="Callum, Telfer, Callum Telfer, Personal Website, Web Development, Minecraft Plugins, Java, PHP, HTML, CSS, SQL, Python, JavaScript">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="index, follow">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha512-HaoDYc3PGduguBWOSToNc0AWGHBi2Y432Ssp3wNIdlOzrunCtB2qq6FrhtPbo+PlbvRbyi86dr5VQx61eg/daQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <meta name="keywords" content="Callum, Telfer, Personal Website, Web Development, Minecraft Plugins, Java, PHP, HTML, CSS, SQL, Python, JavaScript">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
-    <link rel="icon" type="image/png" href="assets/CTD_LOGO.png">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 </head>
-<body class="bg-gray-100 font-sans leading-normal tracking-normal">
-
-    <nav class="bg-white p-6 fixed w-full z-10 top-0 shadow flex justify-center lg:justify-between">
-        <div class="container mx-auto flex justify-center lg:justify-between items-center">
-            <a class="text-gray-800 hover:text-gray-900 text-xl font-bold text-center lg:text-left" href="#">Callum Telfer</a>
-            <div class="hidden lg:block">
-                <ul class="inline-flex">
-                    <li><a href="#" class="px-4 py-2 text-gray-700 hover:text-gray-900 font-bold" onclick="scrollToElement('home')">Home</a></li>
-                    <li><a href="#projects" class="px-4 py-2 text-gray-700 hover:text-gray-900 font-bold" onclick="scrollToElement('projects')">Projects</a></li>
-                    <li><a href="#skills" class="px-4 py-2 text-gray-700 hover:text-gray-900 font-bold" onclick="scrollToElement('skills')">Skills</a></li>
-                    <li><a href="https://cv.callumtelfer.uk" target="#" class="px-4 py-2 text-gray-700 hover:text-gray-900 font-bold">Resume</a></li>
-                </ul>
-            </div>
+<body class="bg-black text-white">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 100,
+                easing: 'ease-out-cubic'
+            });
+        });
+    </script>
+    <!-- Mobile Nav -->
+    <nav class="md:hidden fixed bottom-0 left-0 right-0 bg-gray-900 z-50 px-4 py-3">
+        <div class="flex justify-around items-center">
+            <a href="#home" class="text-gray-400 hover:text-white transition-colors p-2">
+                <i class="fas fa-home text-xl"></i>
+            </a>
+            <a href="#projects" class="text-gray-400 hover:text-white transition-colors p-2">
+                <i class="fas fa-code text-xl"></i>
+            </a>
+            <a href="#skills" class="text-gray-400 hover:text-white transition-colors p-2">
+                <i class="fas fa-brain text-xl"></i>
+            </a>
+            <a href="#contact" class="text-gray-400 hover:text-white transition-colors p-2">
+                <i class="fas fa-envelope text-xl"></i>
+            </a>
+            <a href="https://cv.callumtelfer.uk" target="_blank" class="text-gray-400 hover:text-white transition-colors p-2">
+                <i class="fas fa-file-alt text-xl"></i>
+            </a>
         </div>
     </nav>
-    <header class="bg-gradient-to-r from-blue-500 to-indigo-600 relative pt-16 pb-32 flex content-center items-center justify-center" style="min-height: 75vh;" id="home">
-        <div class="absolute top-0 w-full h-full bg-center bg-cover" style="background-image:url('assets/london_2023.jpeg');">
-            <span id="blackOverlay" class="w-full h-full absolute opacity-60 bg-black"></span>
-        </div>
-        <div class="container relative mx-auto">
-            <div class="items-center flex flex-wrap">
-                <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
-                    <div class="pr-12">
-                        <h1 class="text-white font-semibold text-5xl">
-                            Hello, I'm Callum
-                        </h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden" style="height: 70px;">
-        </div>
-    </header>
 
-    <section class="bg-white py-8">
-        <div class="container mx-auto px-2 pt-4 pb-12 text-gray-800" id="projects">
-            <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">Projects</h1>
-            <div class="w-full mb-4">
-                <div class="h-1 mx-auto bg-indigo-600 w-64 opacity-25 my-0 py-0 rounded-t"></div>
-            </div>
-            <div class="flex flex-wrap justify-center">
-                <div class="w-full md:w-1/3 lg:w-1/4 p-4">
-                    <div class="rounded-lg shadow-lg bg-gray-200 p-6">
-                        <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/VoidemLIVE/callumtelfer.uk" target="#">Callumtelfer.uk</a></h3>
-                        <p class="text-gray-700">My personal website that you are currently viewing!</p>
-                        <div class="inline-flex items-center bg-gray-400 rounded-full p-1">
-                        <svg width="20" height="20">
-                            <circle cx="10" cy="10" r="5" fill="#4F5D95" />
-                        </svg>
-                        <p class="text-xs ml-1 mr-2 font-bold">PHP</p>
-                        </div>
-                        <div class="inline-flex items-center bg-gray-400 rounded-full p-1">
-                            <img width="25" height="20" src="assets/twLogo.png" alt="Tailwind Logo" style="width: 25px; height: 20px;">
-                            <p class="text-xs ml-1 mr-2 font-bold">Tailwind</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-full md:w-1/3 lg:w-1/4 p-4">
-                    <div class="rounded-lg shadow-lg bg-gray-200 p-6">
-                        <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/VoidemLIVE/GeoWordle" target="#">Geo Wordle</a></h3>
-                        <p class="text-gray-700">A geography wordle-like game for guessing countries</p>
-                        <div class="inline-flex items-center bg-gray-400 rounded-full p-1">
-                        <svg width="20" height="20">
-                            <circle cx="10" cy="10" r="5" fill="#4F5D95" />
-                        </svg>
-                        <p class="text-xs ml-1 mr-2 font-bold">PHP</p>
-                        </div>
-                        <div class="inline-flex items-center bg-gray-400 rounded-full p-1">
-                            <img width="25" height="20" src="assets/twLogo.png" alt="Tailwind Logo" style="width: 25px; height: 20px;">
-                            <p class="text-xs ml-1 mr-2 font-bold">Tailwind</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-full md:w-1/3 lg:w-1/4 p-4">
-                    <div class="rounded-lg shadow-lg bg-gray-200 p-6">
-                        <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/VoidemLIVE/Help-Command-Plugin" target="#">Help Command</a></h3>
-                        <p class="text-gray-700">A Minecraft plugin that creates a custom /help command</p>
-                        <div class="inline-flex items-center bg-gray-400 rounded-full p-1">
-                        <svg width="20" height="20">
-                            <circle cx="10" cy="10" r="5" fill="#b07219" />
-                        </svg>
-                        <p class="text-xs ml-1 mr-2 font-bold">Java</p>
-                        </div>
-                        <div class="inline-flex items-center bg-gray-400 rounded-full p-1">
-                            <img width="25" height="20" src="assets/spigot.png" alt="Tailwind Logo" style="width: 25px; height: 20px;">
-                            <p class="text-xs ml-1 mr-2 font-bold">Spigot</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-full md:w-1/3 lg:w-1/4 p-4">
-                    <div class="rounded-lg shadow-lg bg-gray-200 p-6">
-                        <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/VoidemLIVE/VoidemScreenshots" target="#">Screenshot Manager</a></h3>
-                        <p class="text-gray-700">A system that allows you to store and display screenshots</p>
-                        <div class="inline-flex items-center bg-gray-400 rounded-full p-1">
-                        <svg width="20" height="20">
-                            <circle cx="10" cy="10" r="5" fill="#4F5D95" />
-                        </svg>
-                        <p class="text-xs ml-1 mr-2 font-bold">PHP</p>
-                        </div>
-                        <div class="inline-flex items-center bg-gray-400 rounded-full p-1">
-                            <img width="25" height="20" src="assets/twLogo.png" alt="Tailwind Logo" style="width: 25px; height: 20px;">
-                            <p class="text-xs ml-1 mr-2 font-bold">Tailwind</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-gray-100 py-8">
-        <div class="container mx-auto px-2 pt-4 pb-12 text-gray-800" id="skills">
-            <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">Skills</h1>
-            <div class="w-full mb-4">
-                <div class="h-1 mx-auto bg-indigo-600 w-64 opacity-25 my-0 py-0 rounded-t"></div>
-            </div>
-            <div class="flex flex-wrap justify-center">
-                <div class="w-full md:w-1/2 lg:w-1/4 p-4 text-center">
-                    <div class="bg-gray-200 rounded-lg shadow-lg p-6">
-                        <h3 class="text-xl font-semibold mb-2">Frontend Development</h3>
-                        <p class="text-gray-700">HTML, CSS, JavaScript</p>
-                    </div>
-                </div>
-                <div class="w-full md:w-1/2 lg:w-1/4 p-4 text-center">
-                    <div class="bg-gray-200 rounded-lg shadow-lg p-6">
-                        <h3 class="text-xl font-semibold mb-2">Backend Development</h3>
-                        <p class="text-gray-700">PHP, Java, Node.JS</p>
-                    </div>
-                </div>
-                <div class="w-full md:w-1/2 lg:w-1/4 p-4 text-center">
-                    <div class="bg-gray-200 rounded-lg shadow-lg p-6">
-                        <h3 class="text-xl font-semibold mb-2">Technologies</h3>
-                        <p class="text-gray-700">Git, MySQL, VSC</p>
-                    </div>
-                </div>
-                <div class="w-full md:w-1/2 lg:w-1/4 p-4 text-center">
-                    <div class="bg-gray-200 rounded-lg shadow-lg p-6">
-                        <h3 class="text-xl font-semibold mb-2">Other Skills</h3>
-                        <p class="text-gray-700">Problem Solving, Packet Tracer, Ubuntu</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-gray-300 border-t border-gray-400 shadow mt-12">
-    <div class="container max-w-4xl mx-auto flex justify-between items-center py-8">
-        <div class="flex w-full md:w-1/2 justify-center md:justify-start text-white">
-            <a class="pr-8" href="https://linkedin.com/in/callum-telfer" target="#">
-                <i class="fab fa-linkedin-in text-gray-500 hover:text-gray-600 text-lg"></i>
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex fixed left-0 top-0 h-screen w-20 bg-gray-900 flex-col items-center justify-between py-8 z-50">
+        <div class="text-3xl font-bold" style="font-family: 'JetBrains Mono', monospace;">CT</div>
+        <div class="flex flex-col space-y-8">
+            <a href="#home" class="text-gray-400 hover:text-white transition-colors">
+                <i class="fas fa-home text-xl"></i>
             </a>
-            <a class="pr-8" href="mailto:callum.telfer07@gmail.com" target="#">
-                <i class="far fa-envelope text-gray-500 hover:text-gray-600 text-lg"></i>
+            <a href="#projects" class="text-gray-400 hover:text-white transition-colors">
+                <i class="fas fa-code text-xl"></i>
             </a>
-            <a class="pr-8" href="https://github.com/VoidemLIVE" target="#">
-                <i class="fab fa-github text-gray-500 hover:text-gray-600 text-lg"></i>
+            <a href="#skills" class="text-gray-400 hover:text-white transition-colors">
+                <i class="fas fa-brain text-xl"></i>
+            </a>
+            <a href="#contact" class="text-gray-400 hover:text-white transition-colors">
+                <i class="fas fa-envelope text-xl"></i>
             </a>
         </div>
         <div>
-            <span class="text-gray-500 text-lg font-bold">Callum Telfer</span>
-            <p class="text-sm text-gray-500 hover:text-gray-700 "><a href="https://github.com/VoidemLIVE/callumtelfer.uk" target="#">Github Repository</a></p>
+            <a href="https://cv.callumtelfer.uk" target="_blank" class="rotate-90 block transform origin-center text-sm font-medium hover:text-gray-300">RESUME</a>
         </div>
-    </div>
-</footer>
-<script>
-    function scrollToElement(id) {
-        var element = document.getElementById(id);
-        if (element) {
-            gsap.to(window, {scrollTo: element, duration: 1, ease: "power2.out"});
-        } else {
-            console.error("Element with ID '" + id + "' not found.");
-        }
-    }
+    </nav>
+
+    <main class="md:ml-20">
+        <!-- Hero -->
+        <section id="home" class="min-h-screen bg-gradient-to-br from-gray-900 to-black relative overflow-hidden px-4 md:px-0">
+            <div class="absolute inset-0 opacity-20">
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black"></div>
+                <div class="grid grid-cols-8 grid-rows-8 gap-4 h-full w-full">
+                    <div class="col-span-1 row-span-1 bg-white/5 rounded-lg"></div>
+                </div>
+            </div>
+            
+            <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent"></div>
+            
+            <div class="relative flex items-center justify-center h-screen">
+                <div class="max-w-4xl mx-auto px-4 md:px-8 text-center">
+                    <h1 class="text-4xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent" data-aos="fade-up">
+                        Callum Telfer
+                    </h1>
+                    <p class="text-xl md:text-2xl text-gray-400 mb-12" data-aos="fade-up" data-aos-delay="100">Full-Stack Developer & Problem Solver</p>
+                    <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6" data-aos="fade-up" data-aos-delay="200">
+                        <a href="#projects" class="px-8 py-3 bg-white text-black rounded hover:bg-gray-300 transition-colors">View Work</a>
+                        <a href="#contact" class="px-8 py-3 border border-white rounded hover:bg-white hover:text-black transition-all">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- projects  -->
+        <section id="projects" class="py-20 px-4 md:px-0">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold mb-16" data-aos="fade-right">Featured<br/>Projects_</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-900 rounded-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300" 
+                        data-aos="fade-up"
+                        data-aos-delay="0">
+                        <div class="h-48 bg-gray-800 relative">
+                            <img src="assets/ctuk.png" alt="Callumtelfer.uk Preview" class="w-full h-full object-cover"/>
+                            <div class="absolute top-4 right-4 flex space-x-3">
+                                <a href="https://callumtelfer.uk" target="_blank" 
+                                class="bg-white/10 backdrop-blur-sm px-3 rounded-full text-white hover:bg-white/20 transition-colors text-sm font-medium flex items-center">
+                                    <i class="fas fa-external-link-alt mr-2 text-sm"></i>
+                                    Visit Site
+                                </a>
+                                <a href="https://github.com/VoidemLIVE/callumtelfer.uk" target="_blank" 
+                                class="text-white hover:text-gray-300 transition-colors">
+                                    <i class="fab fa-github text-2xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Callumtelfer.uk</h3>
+                            <p class="text-gray-400 mb-4">Personal portfolio website showcasing my work and skills</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">PHP</span>
+                                <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">Tailwind</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-900 rounded-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300" 
+                        data-aos="fade-up"
+                        data-aos-delay="100">
+                        <div class="h-48 bg-gray-800 relative">
+                            <img src="assets/geoWordleBan.png" alt="Geo Wordle Preview" class="w-full h-full object-cover"/>
+                            <div class="absolute top-4 right-4 flex space-x-3">
+                                <a href="https://geo.voidem.com" target="_blank" 
+                                class="bg-black/10 backdrop-blur-sm px-3 rounded-full text-black hover:bg-black/20 transition-colors text-sm font-medium flex items-center">
+                                    <i class="fas fa-external-link-alt mr-2 text-sm"></i>
+                                    Visit Site
+                                </a>
+                                <a href="https://github.com/VoidemLIVE/GeoWordle" target="_blank" 
+                                class="text-black hover:text-gray-600 transition-colors">
+                                    <i class="fab fa-github text-2xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Geo Wordle</h3>
+                            <p class="text-gray-400 mb-4">Interactive geography game based on the Wordle concept</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">PHP</span>
+                                <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">Tailwind</span>
+                                <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-900 rounded-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300" 
+                            data-aos="fade-up"
+                            data-aos-delay="200">
+                        <div class="h-48 bg-gray-800 relative">
+                            <img src="assets/screenshots.png" alt="Screenshot Manager Preview" class="w-full h-full object-cover"/>
+                            <div class="absolute top-4 right-4">
+                                <a href="https://github.com/VoidemLIVE/VoidemScreenshots" target="_blank" 
+                                class="text-black hover:text-gray-600 transition-colors">
+                                    <i class="fab fa-github text-2xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Screenshot Manager</h3>
+                            <p class="text-gray-400 mb-4">System for storing and displaying screenshots taken using ShareX</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">PHP</span>
+                                <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">Tailwind</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="relative min-h-screen py-20 bg-black px-4 md:px-0">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_500px_at_50%_-30%,#1f2937,transparent)]"></div>
+
+            <div class="max-w-6xl mx-auto relative">
+                <div class="text-center mb-20">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6" data-aos="fade-right">Technical<br/>Expertise_</h2>
+                    <div class="h-1 w-32 bg-gradient-to-r from-gray-800 to-transparent mx-auto"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Left col -->
+                    <div class="space-y-6">
+                        <!-- Languages -->
+                        <div class="bg-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-gray-800" 
+                            data-aos="fade-right"
+                            data-aos-delay="0">
+                            <div class="flex items-center mb-8">
+                                <div class="w-1 h-8 bg-blue-500 rounded-full mr-4"></div>
+                                <h3 class="text-2xl font-bold">Core Languages</h3>
+                            </div>
+
+                            <div class="space-y-6">
+                                <!-- PHP -->
+                                <div class="group">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <div class="flex items-center">
+                                            <span class="text-gray-300 font-medium">PHP</span>
+                                            <span class="ml-3 text-xs text-blue-400 font-mono">Advanced</span>
+                                        </div>
+                                        <span class="text-gray-400 text-sm">90%</span>
+                                    </div>
+                                    <div class="h-1 w-full bg-gray-800 rounded-full overflow-hidden">
+                                        <div class="h-full w-11/12 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full transform origin-left transition-transform duration-500 ease-out group-hover:scale-x-105"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Java -->
+                                <div class="group">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <div class="flex items-center">
+                                            <span class="text-gray-300 font-medium">Java</span>
+                                            <span class="ml-3 text-xs text-blue-400 font-mono">Advanced</span>
+                                        </div>
+                                        <span class="text-gray-400 text-sm">85%</span>
+                                    </div>
+                                    <div class="h-1 w-full bg-gray-800 rounded-full overflow-hidden">
+                                        <div class="h-full w-10/12 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full transform origin-left transition-transform duration-500 ease-out group-hover:scale-x-105"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Python -->
+                                <div class="group">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <div class="flex items-center">
+                                            <span class="text-gray-300 font-medium">Python</span>
+                                            <span class="ml-3 text-xs text-blue-400 font-mono">Intermediate</span>
+                                        </div>
+                                        <span class="text-gray-400 text-sm">70%</span>
+                                    </div>
+                                    <div class="h-1 w-full bg-gray-800 rounded-full overflow-hidden">
+                                        <div class="h-full w-9/12 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full transform origin-left transition-transform duration-500 ease-out group-hover:scale-x-105"></div>
+                                    </div>
+                                </div>
+
+                                <!-- JavaScript -->
+                                <div class="group">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <div class="flex items-center">
+                                            <span class="text-gray-300 font-medium">JavaScript</span>
+                                            <span class="ml-3 text-xs text-blue-400 font-mono">Intermediate</span>
+                                        </div>
+                                        <span class="text-gray-400 text-sm">60%</span>
+                                    </div>
+                                    <div class="h-1 w-full bg-gray-800 rounded-full overflow-hidden">
+                                        <div class="h-full w-7/12 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full transform origin-left transition-transform duration-500 ease-out group-hover:scale-x-105"></div>
+                                    </div>
+                                </div>
+
+                                <!-- C# -->
+                                <div class="group">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <div class="flex items-center">
+                                            <span class="text-gray-300 font-medium">C#</span>
+                                            <span class="ml-3 text-xs text-blue-400 font-mono">Beginner</span>
+                                        </div>
+                                        <span class="text-gray-400 text-sm">30%</span>
+                                    </div>
+                                    <div class="h-1 w-full bg-gray-800 rounded-full overflow-hidden">
+                                        <div class="h-full w-4/12 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full transform origin-left transition-transform duration-500 ease-out group-hover:scale-x-105"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Specialised -->
+                        <div class="bg-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-gray-800" 
+                                data-aos="fade-right"
+                                data-aos-delay="100">
+                            <div class="flex items-center mb-8">
+                                <div class="w-1 h-8 bg-yellow-500 rounded-full mr-4"></div>
+                                <h3 class="text-2xl font-bold">Specialised</h3>
+                            </div>
+
+                            <div class="space-y-6">
+                                <!-- Spigot -->
+                                <div class="group">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <div class="flex items-center">
+                                            <a href="https://hub.spigotmc.org/javadocs/spigot/" target="_blank" class="text-gray-300 font-medium hover:text-yellow-400 transition-colors">SpigotAPI</a>
+                                            <span class="ml-3 text-xs text-yellow-400 font-mono">Intermediate</span>
+                                        </div>
+                                        <span class="text-gray-400 text-sm">70%</span>
+                                    </div>
+                                    <div class="h-1 w-full bg-gray-800 rounded-full overflow-hidden">
+                                        <div class="h-full w-9/12 bg-gradient-to-r from-yellow-600 to-yellow-400 rounded-full transform origin-left transition-transform duration-500 ease-out group-hover:scale-x-105"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right col -->
+                    <div class="space-y-6">
+                        <!-- Frontend -->
+                        <div class="bg-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-gray-800" 
+                            data-aos="fade-left"
+                            data-aos-delay="0">
+                            <div class="flex items-center mb-8">
+                                <div class="w-1 h-8 bg-purple-500 rounded-full mr-4"></div>
+                                <h3 class="text-2xl font-bold">Frontend</h3>
+                            </div>
+
+                            <div class="space-y-6">
+                                <!-- HTML/CSS -->
+                                <div class="group">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <div class="flex items-center">
+                                            <span class="text-gray-300 font-medium">HTML/CSS</span>
+                                            <span class="ml-3 text-xs text-purple-400 font-mono">Advanced</span>
+                                        </div>
+                                        <span class="text-gray-400 text-sm">85%</span>
+                                    </div>
+                                    <div class="h-1 w-full bg-gray-800 rounded-full overflow-hidden">
+                                        <div class="h-full w-10/12 bg-gradient-to-r from-purple-600 to-purple-400 rounded-full transform origin-left transition-transform duration-500 ease-out group-hover:scale-x-105"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Tailwind -->
+                                <div class="group">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <div class="flex items-center">
+                                            <span class="text-gray-300 font-medium">TailwindCSS</span>
+                                            <span class="ml-3 text-xs text-purple-400 font-mono">Advanced</span>
+                                        </div>
+                                        <span class="text-gray-400 text-sm">85%</span>
+                                    </div>
+                                    <div class="h-1 w-full bg-gray-800 rounded-full overflow-hidden">
+                                        <div class="h-full w-10/12 bg-gradient-to-r from-purple-600 to-purple-400 rounded-full transform origin-left transition-transform duration-500 ease-out group-hover:scale-x-105"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tools -->
+                        <div class="bg-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-gray-800" 
+                            data-aos="fade-left"
+                            data-aos-delay="100">
+                            <div class="flex items-center mb-8">
+                                <div class="w-1 h-8 bg-green-500 rounded-full mr-4"></div>
+                                <h3 class="text-2xl font-bold">Tools</h3>
+                            </div>
+
+                            <div class="space-y-6">
+                                <!-- MySQL -->
+                                <div class="group">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <div class="flex items-center">
+                                            <span class="text-gray-300 font-medium">MySQL</span>
+                                            <span class="ml-3 text-xs text-green-400 font-mono">Advanced</span>
+                                        </div>
+                                        <span class="text-gray-400 text-sm">85%</span>
+                                    </div>
+                                    <div class="h-1 w-full bg-gray-800 rounded-full overflow-hidden">
+                                        <div class="h-full w-10/12 bg-gradient-to-r from-green-600 to-green-400 rounded-full transform origin-left transition-transform duration-500 ease-out group-hover:scale-x-105"></div>
+                                    </div>
+                                </div>
+
+                                <!-- VSCode -->
+                                <div class="group">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <div class="flex items-center">
+                                            <span class="text-gray-300 font-medium">VSCode</span>
+                                            <span class="ml-3 text-xs text-green-400 font-mono">Advanced</span>
+                                        </div>
+                                        <span class="text-gray-400 text-sm">85%</span>
+                                    </div>
+                                    <div class="h-1 w-full bg-gray-800 rounded-full overflow-hidden">
+                                        <div class="h-full w-10/12 bg-gradient-to-r from-green-600 to-green-400 rounded-full transform origin-left transition-transform duration-500 ease-out group-hover:scale-x-105"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Git -->
+                                <div class="group">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <div class="flex items-center">
+                                            <span class="text-gray-300 font-medium">Git</span>
+                                            <span class="ml-3 text-xs text-green-400 font-mono">Intermediate</span>
+                                        </div>
+                                        <span class="text-gray-400 text-sm">65%</span>
+                                    </div>
+                                    <div class="h-1 w-full bg-gray-800 rounded-full overflow-hidden">
+                                        <div class="h-full w-8/12 bg-gradient-to-r from-green-600 to-green-400 rounded-full transform origin-left transition-transform duration-500 ease-out group-hover:scale-x-105"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Ubuntu -->
+                                <div class="group">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <div class="flex items center">
+                                            <span class="text-gray-300 font-medium">Ubuntu</span>
+                                            <span class="ml-3 text-xs text-green-400 font-mono">Intermediate</span>
+                                        </div>
+                                        <span class="text-gray-400 text-sm">60%</span>
+                                    </div>
+                                    <div class="h-1 w-full bg-gray-800 rounded-full overflow-hidden">
+                                        <div class="h-full w-7/12 bg-gradient-to-r from-green-600 to-green-400 rounded-full transform origin-left transition-transform duration-500 ease-out group-hover:scale-x-105"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="py-20 px-4 md:px-0 mb-20 md:mb-0">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold mb-16" data-aos="fade-right">Let's<br/>Connect_</h2>
+                
+                <div class="max-w-2xl">
+                    <p class="text-gray-400 text-lg mb-12" data-aos="fade-up">
+                        I'm always interested in hearing about new projects and opportunities. 
+                        Whether you have a question or just want to say hello, I'll try my 
+                        best to get back to you!
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="space-y-8" data-aos="fade-right">
+                            <a href="https://linkedin.com/in/callum-telfer" target="_blank" 
+                            class="flex items-center space-x-4 text-gray-400 hover:text-white transition-colors group">
+                                <div class="w-12 h-12 rounded-full bg-gray-900 flex items-center justify-center group-hover:bg-gray-800 transition-colors">
+                                    <i class="fab fa-linkedin text-xl"></i>
+                                </div>
+                                <span>Connect on LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/VoidemLIVE" target="_blank"
+                            class="flex items-center space-x-4 text-gray-400 hover:text-white transition-colors group">
+                                <div class="w-12 h-12 rounded-full bg-gray-900 flex items-center justify-center group-hover:bg-gray-800 transition-colors">
+                                    <i class="fab fa-github text-xl"></i>
+                                </div>
+                                <span>Follow on GitHub</span>
+                            </a>
+                        </div>
+                        
+                        <div class="space-y-8" data-aos="fade-left">
+                            <a href="mailto:callum.telfer07@gmail.com"
+                            class="flex items-center space-x-4 text-gray-400 hover:text-white transition-colors group">
+                                <div class="w-12 h-12 rounded-full bg-gray-900 flex items-center justify-center group-hover:bg-gray-800 transition-colors">
+                                    <i class="far fa-envelope text-xl"></i>
+                                </div>
+                                <span>Send me an email</span>
+                            </a>
+                            <a href="https://cv.callumtelfer.uk" target="_blank"
+                            class="flex items-center space-x-4 text-gray-400 hover:text-white transition-colors group">
+                                <div class="w-12 h-12 rounded-full bg-gray-900 flex items-center justify-center group-hover:bg-gray-800 transition-colors">
+                                    <i class="far fa-file-alt text-xl"></i>
+                                </div>
+                                <span>View Resume</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="md:ml-20 py-8 border-t border-gray-800 px-4 md:px-0 mb-16 md:mb-0">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                <p class="text-gray-400">© 2024 Callum Telfer</p>
+                <a href="https://github.com/VoidemLIVE/callumtelfer.uk" target="_blank" 
+                   class="text-gray-400 hover:text-white transition-colors">
+                    View Source
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    window.addEventListener('scroll', () => {
+        let current = '';
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+        const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionBottom = sectionTop + section.offsetHeight;
+
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                current = section.getAttribute('id');
+            }
+
+            if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 100) {
+                current = 'contact';
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('text-white');
+            link.classList.add('text-gray-400');
+            if (link.getAttribute('href').slice(1) === current) {
+                link.classList.remove('text-gray-400');
+                link.classList.add('text-white');
+            }
+        });
+    });
 </script>
 </body>
 </html>
