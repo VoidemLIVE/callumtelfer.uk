@@ -1,3 +1,11 @@
+<?php
+
+function logToConsole($data) {
+    echo "<script>console.log('$data')</script>";
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
