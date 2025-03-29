@@ -264,14 +264,14 @@ function logToConsole($data) {
                                     </div>
                                 </div>
 
-                                <!-- C# -->
+                                <!-- C - Newly added 29/03/2025 as I have become more proficient & gotten less interested in C# -->
                                 <div class="group">
                                     <div class="flex justify-between items-center mb-2">
                                         <div class="flex items-center">
-                                            <span class="text-gray-300 font-medium">C#</span>
+                                            <span class="text-gray-300 font-medium">C</span>
                                             <span class="ml-3 text-xs text-blue-400 font-mono">Beginner</span>
                                         </div>
-                                        <span class="text-gray-400 text-sm">30%</span>
+                                        <span class="text-gray-400 text-sm">40%</span>
                                     </div>
                                     <div class="h-1 w-full bg-gray-800 rounded-full overflow-hidden">
                                         <div class="h-full w-4/12 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full transform origin-left transition-transform duration-500 ease-out group-hover:scale-x-105"></div>
