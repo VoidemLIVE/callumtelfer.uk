@@ -137,15 +137,15 @@ function logToConsole($data) {
                         data-aos="fade-up"
                         data-aos-delay="100">
                         <div class="h-48 bg-gray-800 relative">
-                            <img src="assets/geoWordleBan.png" alt="Geo Wordle Preview" class="w-full h-full object-cover"/>
+                            <img src="assets/newGeoWordleBanner.png" alt="Geo Wordle Preview" class="w-full h-full object-cover"/>
                             <div class="absolute top-4 right-4 flex space-x-3">
                                 <a href="https://geo.voidem.com" target="_blank" 
-                                class="bg-black/10 backdrop-blur-sm px-3 rounded-full text-black hover:bg-black/20 transition-colors text-sm font-medium flex items-center">
+                                class="bg-white/10 backdrop-blur-sm px-3 rounded-full text-white hover:bg-white/20 transition-colors text-sm font-medium flex items-center">
                                     <i class="fas fa-external-link-alt mr-2 text-sm"></i>
                                     Visit Site
                                 </a>
                                 <a href="https://github.com/VoidemLIVE/GeoWordle" target="_blank" 
-                                class="text-black hover:text-gray-600 transition-colors">
+                                class="text-white hover:text-gray-300 transition-colors">
                                     <i class="fab fa-github text-2xl"></i>
                                 </a>
                             </div>
@@ -155,6 +155,7 @@ function logToConsole($data) {
                             <p class="text-gray-400 mb-4">Interactive geography game based on the Wordle concept</p>
                             <div class="flex flex-wrap gap-2">
                                 <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">PHP</span>
+                                <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">MySQL</span>
                                 <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">Tailwind</span>
                                 <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">JavaScript</span>
                             </div>
